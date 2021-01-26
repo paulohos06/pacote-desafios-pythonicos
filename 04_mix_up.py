@@ -13,8 +13,15 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    arr_a = [i for i in a] if(len(a) >= 2) else None
+    arr_b = [j for j in b] if(len(b) >= 2) else None
+    temp = []
+    for item in range(0,2):
+        temp.append(arr_a[item])
+        arr_a[item] = arr_b[item]
+        arr_b[item] = temp[item]
+
+    return f'{"".join(arr_a)} {"".join(arr_b)}'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

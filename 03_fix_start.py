@@ -14,9 +14,12 @@ onde todas as instancias de stra foram substituidas por strb.
 """
 
 def fix_start(s):
-    # +++ SUA SOLUÇÃO +++
-    return
-
+    first_char = s[0]
+    myarr = []
+    myarr.append(first_char)
+    for item in range(1,len(s)):
+        myarr.append('*') if s[item] == first_char else myarr.append(s[item])
+    return ''.join(myarr)
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 

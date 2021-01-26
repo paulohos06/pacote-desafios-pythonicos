@@ -8,8 +8,8 @@ for menor que 2, retorne uma string vazia.
 """
 
 def both_ends(s):
-    # +++ SUA SOLUÇÃO +++
-    return
+    strlen = len(s)
+    return f'{s[:2]}{s[strlen-2:strlen]}' if (strlen > 2) else ''
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
